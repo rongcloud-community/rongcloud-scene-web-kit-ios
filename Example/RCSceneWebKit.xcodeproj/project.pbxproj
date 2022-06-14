@@ -62,11 +62,11 @@
 		778DFF430D30E395E9C5DA76 /* Pods-RCSceneWebKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCSceneWebKit_Tests.release.xcconfig"; path = "Target Support Files/Pods-RCSceneWebKit_Tests/Pods-RCSceneWebKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		7EE6F003DC8BDE7CAF676A5A /* Pods-RCSceneWebKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCSceneWebKit_Tests.debug.xcconfig"; path = "Target Support Files/Pods-RCSceneWebKit_Tests/Pods-RCSceneWebKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9678D0863B3DA32CD044687A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		A8E75D4A00BABCB35311F968 /* RCSceneWebKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = RCSceneWebKit.podspec; path = ../RCSceneWebKit.podspec; sourceTree = "<group>"; };
+		9678D0863B3DA32CD044687A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		A8E75D4A00BABCB35311F968 /* RCSceneWebKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = RCSceneWebKit.podspec; path = ../RCSceneWebKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BB8D10C9A8322DDFF19C6BAE /* Pods-RCSceneWebKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCSceneWebKit_Example.release.xcconfig"; path = "Target Support Files/Pods-RCSceneWebKit_Example/Pods-RCSceneWebKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		CE912B67B258BA3501F3484D /* Pods_RCSceneWebKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RCSceneWebKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5884DBA50A513FC50F53DE1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		D5884DBA50A513FC50F53DE1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,7 +193,6 @@
 				7EE6F003DC8BDE7CAF676A5A /* Pods-RCSceneWebKit_Tests.debug.xcconfig */,
 				778DFF430D30E395E9C5DA76 /* Pods-RCSceneWebKit_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -248,6 +247,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "彭蕾";
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = 43XBZUE6H4;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -258,6 +260,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -346,10 +349,14 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-RCSceneWebKit_Example/Pods-RCSceneWebKit_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/RCSceneBaseKit/RCSceneBaseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/RCSceneWebKit/RCSceneWebKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCSceneBaseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCSceneWebKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,11 +501,12 @@
 			baseConfigurationReference = 4AB7D93647F778D997BF4FBA /* Pods-RCSceneWebKit_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 43XBZUE6H4;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RCSceneWebKit/RCSceneWebKit-Prefix.pch";
 				INFOPLIST_FILE = "RCSceneWebKit/RCSceneWebKit-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.RCSceneNetworkKit-Example1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
@@ -510,11 +518,12 @@
 			baseConfigurationReference = BB8D10C9A8322DDFF19C6BAE /* Pods-RCSceneWebKit_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 43XBZUE6H4;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RCSceneWebKit/RCSceneWebKit-Prefix.pch";
 				INFOPLIST_FILE = "RCSceneWebKit/RCSceneWebKit-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.RCSceneNetworkKit-Example1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;

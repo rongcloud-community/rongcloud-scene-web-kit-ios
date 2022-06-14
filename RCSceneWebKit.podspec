@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license      = { :type => "Copyright", :text => "Copyright 2022 RongCloud" }
   s.author           = { '彭蕾' => 'penglei1@rongcloud.cn' }
-  s.source           = { :git => 'git@github.com:rongcloud-community/RCSceneWebKit.git', :tag => s.version.to_s }
+  s.source           = { :git => 'git@github.com:rongcloud-community/rongcloud-scene-web-kit-ios.git', :tag => s.version.to_s }
 
   s.social_media_url = 'https://www.rongcloud.cn/devcenter'
 
@@ -33,11 +33,11 @@ Pod::Spec.new do |s|
 
   s.source_files = 'RCSceneWebKit/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'RCSceneWebKit' => ['RCSceneWebKit/Assets/**/*']
-  # }
+   s.resource_bundles = {
+     'RCSceneWebKit' => ['RCSceneWebKit/Assets/**/*']
+   }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'Masonry'
+  s.dependency 'RCSceneBaseKit'
+  
 end
