@@ -19,6 +19,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
+
 - (IBAction)jump:(id)sender {
     
     RCSWebViewController *webVC = [[RCSWebViewController alloc] initWithUrlString:@"https://www.baidu.com" title:@"百度"];

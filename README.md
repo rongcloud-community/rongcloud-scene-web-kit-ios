@@ -11,6 +11,8 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+Minimum iOS Target：iOS 11.0
+
 ## Installation
 
 RCSceneWebKit is available through [CocoaPods](https://cocoapods.org). To install
@@ -18,6 +20,15 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 pod 'RCSceneWebKit'
+```
+
+## Usage
+
+```Objective-c
+    // 实例化 web 控制器，传入url和title
+    RCSWebViewController *webVC = [[RCSWebViewController alloc] initWithUrlString:@"https://www.baidu.com" title:@"百度"];
+    // self present web 控制器
+    [webVC showIn:self];
 ```
 
 ## Author
